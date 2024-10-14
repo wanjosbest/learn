@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{% block page_content %}
+<marquee  ><h1>Students Enrollment</h1></marquee>
+<div class="container">
+    <h1>signup</h1>
+    <form action="" method="post">
+        {%csrf_token%}
+        {{form}}
+        <br/>
+        <button type="submit"class="btn btn-success" id="signupbtn">Sign Up</button>
+
+    </form>
+
+</div>
+{% endblock page_content %}

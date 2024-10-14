@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+
+
+
+{% block header%}
+<link rel="stylesheet" href="static/css/style.css">
+{% endblock header%}
+
+<div class="container">
+{%block content%}
+<form action=""method="post">
+    {%csrf_token%}
+   Select Category: <p>{{form.category}}</p>
+  Post Title: <p>{{form.title}}</p>
+    Post contents:<p>{{form.content}}</p>
+    <br/>
+   slug(For Urls):<p>{{form.slug}}</p>
+    <button type="submit"  class="post-btn"> POST</button>
+
+</form>
+{%endblock content%}
+</div>
